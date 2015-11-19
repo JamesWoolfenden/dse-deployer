@@ -1,10 +1,11 @@
 ##Introduction
 This is an [Ansible Playbook](http://docs.ansible.com/playbooks.html) you can point and shoot at any infrastructure you want to build a DataStax Enterprise cluster with Cassandra, Solr and Spark. The playbook will install, configure single and multiple clusters. Add more nodes and datacenters by simply including more hosts. There is an optional [OpsCenter](http://www.datastax.com/products/datastax-enterprise-visual-admin) Playbook included. The latest version of [DataStax Enterprise](http://www.datastax.com/what-we-offer/products-services/datastax-enterprise) will be installed.  
+This example is modified to work with the AWS infrastrucuture in Multi-regions from JoelJacobsons example.
 
 ##Instructions
 Clone the Playbook: 
 ```
-git clone https://github.com/joeljacobson/dse-deployer.git
+git clone https://github.com/JamesWoolfenden/dse-deployer.git
 ```
 2. Make sure you have SSH access to your hosts. 
 
