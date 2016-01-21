@@ -65,7 +65,8 @@ batchlog_replay_throttle_in_kb: 1024
 #   through Kerberos. Additional configuration is required in dse.yaml
 # - com.datastax.bdp.cassandra.auth.LdapAuthenticator For external authentication
 #   through Ldap. Additional configuration is required in dse.yaml
-authenticator: AllowAllAuthenticator
+#authenticator: AllowAllAuthenticator
+authenticator: {{config.authenticator}}
 #authenticator: com.datastax.bdp.cassandra.auth.KerberosAuthenticator
 #authenticator: com.datastax.bdp.cassandra.auth.LdapAuthenticator
 
@@ -76,7 +77,8 @@ authenticator: AllowAllAuthenticator
 # - AllowAllAuthorizer allows any action to any user - set it to disable authorization.
 # - CassandraAuthorizer stores permissions in system_auth.permissions table. Please
 #   increase system_auth keyspace replication factor if you use this authorizer.
-authorizer: AllowAllAuthorizer
+#  authorizer:AllowAllAuthorizer
+authorizer: {{config.authorizer}}
 
 # Validity period for permissions cache (fetching permissions can be an
 # expensive operation depending on the authorizer, CassandraAuthorizer is
@@ -450,7 +452,7 @@ rpc_port: 9160
 # be set to 0.0.0.0. If left blank, this will be set to the value of
 # rpc_address. If rpc_address is set to 0.0.0.0, broadcast_rpc_address must
 # be set.
-broadcast_rpc_address: '{{ config.broadcast_address }}'
+broadcast_rpc_address: '{{ config.broadcast_rpc_address }}'
 
 # enable or disable keepalive on rpc/native connections
 rpc_keepalive: true

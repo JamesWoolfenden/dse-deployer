@@ -1,6 +1,0 @@
-config:
-   cluster_name: 'AEVI'
-   seeds: 'seed_public_IP'
-   listen_address: local_IP
-   broadcast_address: public_IP
-   endpoint_snitch: Ec2MultiRegionSnitch

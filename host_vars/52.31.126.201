@@ -1,7 +1,0 @@
-config:
-   cluster_name: 'AEVI'
-   seeds: '52.31.126.201'
-   listen_address: 172.31.46.104
-   broadcast_address: 52.31.126.201
-   endpoint_snitch: Ec2MultiRegionSnitch
-
