@@ -1,8 +1,9 @@
-##Introduction
-This is an [Ansible Playbook](http://docs.ansible.com/playbooks.html) you can point and shoot at any infrastructure you want to build a DataStax Enterprise cluster with Cassandra, Solr and Spark. The playbook will install a clusters in multiple AWS data-centres. Add more nodes and datacenters by simply including more hosts. There is an optional [OpsCenter](http://www.datastax.com/products/datastax-enterprise-visual-admin) Playbook included. The latest version of [DataStax Enterprise](http://www.datastax.com/what-we-offer/products-services/datastax-enterprise) will be installed.  
+# Introduction
+
+This is an [Ansible Playbook](http://docs.ansible.com/playbooks.html), you can point and shoot at any infrastructure you want to build a DataStax Enterprise cluster with Cassandra, Solr and Spark. The playbook will install a clusters in multiple AWS data-centres. Add more nodes and datacenters by simply including more hosts. There is an optional [OpsCenter](http://www.datastax.com/products/datastax-enterprise-visual-admin) Playbook included. The latest version of [DataStax Enterprise](http://www.datastax.com/what-we-offer/products-services/datastax-enterprise) will be installed.  
 This example is modified to work with the AWS infrastrucuture in Multi-regions from JoelJacobsons example. I hope to combine this with a Terraform script (https://github.com/JamesWoolfenden/terraform-aws-cassandra) to provision the entire infrastructure, that this script will configure.
 
-##Instructions
+## Instructions
 Clone the Playbook: 
 ```
 git clone https://github.com/JamesWoolfenden/dse-deployer.git
@@ -27,7 +28,7 @@ To build a Solr Cluster:
 
 Run ```ansible-playbook -i hosts solr.yml```
 
-###Cassandra and Spark multi-dc deployments
+## Cassandra and Spark multi-dc deployments
 
 1. Edit the ```hosts``` file and add IPs for dc1 and dc2.
 
@@ -37,7 +38,7 @@ Run ```ansible-playbook -i hosts solr.yml```
 
 Run ```ansible-playbook -i hosts multi-spark.yml```
 
-###Cassandra and Solr multi-dc deployments
+## Cassandra and Solr multi-dc deployments
 
 1. Edit the ```hosts``` file and add IPs for dc1 and dc2.
 
